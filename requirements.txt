@@ -1,0 +1,6 @@
+# CyberPartha BOT v3 — runtime dependencies
+requests>=2.31.0
+
+# Optional: AI provider backends
+# openai>=1.0     # For OpenAI-compatible APIs
+# httpx>=0.24     # Async HTTP (if needed)

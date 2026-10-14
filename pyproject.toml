@@ -1,0 +1,28 @@
+[build-system]
+requires = ['setuptools>=68']
+build-backend = 'setuptools.backends.legacy:build'
+
+[project]
+name = 'cyberpartha-bot'
+version = '3.0.0'
+description = 'Policy-gated bug bounty security research assistant'
+requires-python = '>=3.11'
+license = {text = 'MIT'}
+dependencies = [
+    'requests>=2.31.0',
+]
+
+[project.optional-dependencies]
+dev = [
+    'pytest>=7.0',
+]
+ai = [
+    # Optional: only needed if using AI provider backends
+    # 'openai>=1.0',
+]
+
+[tool.setuptools.packages.find]
+include = ['core*', 'engine*', 'intelligence*', 'validation*', 'reporting*']
+
+[project.scripts]
+cyberpartha-bot = 'bot:main'
